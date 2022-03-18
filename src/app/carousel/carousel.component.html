@@ -1,0 +1,59 @@
+<div id="carouselExampleControls" class="carousel carousels-container " data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="m-auto h-100 w-100 ">
+                <div class=" row h-100 w-100 " *ngIf="carouselArr[5].backdrop_path != null">
+                    <div class="text-starter h-100 col-md-3 col-sm-1"></div>
+                    <!-- <img [src]="imgBaseUrl+carouselArr[5].backdrop_path" > -->
+                    <div class="cover cover-img h-100 col-md-9 col-sm-11"
+                        [ngStyle]="{'background-image':' url(' + imgBaseUrl + carouselArr[5].backdrop_path + ')'}" >
+                    </div>
+                    <div class="overlay-details d-flex justify-content-between align-items-center ">
+                        <div class="overlay-details-inner d-flex align-items-center ">
+                            <div>
+                                <a class="link-none" [routerLink]="['/movie',carouselArr[5].id]">
+                                    <h1 class="title">{{ carouselArr[5].original_title}}</h1>
+                                </a>
+                                <p class="overview">{{ overviews[5] }}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngFor="let movieDate of moviesDate">
+            <div *ngFor="let carousel of carouselArr" class="carousel-item">
+                <div class="m-auto h-100 w-100" *ngFor="let overview of overviews">
+                      <div class=" row h-100 w-100" *ngIf="carouselArr[5].backdrop_path != null">
+                        <div class="text-starter h-100 col-md-3"></div>
+                        <div class="cover h-100 col-md-9"
+                            [ngStyle]="{'background-image':' url(' + imgBaseUrl + carousel.backdrop_path + ')'}">
+                        </div>
+                        <div class="overlay-details d-flex justify-content-between align-items-center ">
+                            <div class="overlay-details-inner d-flex align-items-center ">
+                                <div>
+                                    <a class="link-none" [routerLink]="['/movie',carousel.id]">
+                                        <h1 class="title">{{ carousel.original_title }}</h1>
+                                    </a>
+                                    <p class="overview">{{ overview }}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class=" carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>

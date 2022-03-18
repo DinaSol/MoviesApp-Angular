@@ -1,0 +1,43 @@
+<div class="category-container">
+    <h1 class="category">TV Shows</h1>
+    
+<section class="collection m-auto">
+    <div class="collection-info"><p class="collection-title ">Popular TV Shows </p> </div>
+    <ngx-slick-carousel class="carousel ngx-slick-carousel-category" #slickModal="slick-carousel" [config]="slideConfig" >
+        <div ngxSlickItem *ngFor="let popularSeries of popularSerieses" class="slide-cover mx-2">
+            <a [routerLink]="['/tvShows', popularSeries.id]">
+                <img [src]="imgBaseUrl+popularSeries.backdrop_path" class="card-img-top img-fluid">
+                <p>{{ popularSeries.original_name }}</p>
+            </a>
+        </div>
+    </ngx-slick-carousel>
+</section>
+
+
+<!-- getOnAirTV -->
+<section class="collection m-auto">
+    <div class="collection-info"><p class="collection-title ">On The Air </p> </div>
+    <ngx-slick-carousel class="carousel ngx-slick-carousel-category" #slickModal="slick-carousel" [config]="slideConfig" >
+        <div ngxSlickItem *ngFor="let onAirTV of onAirTVs" class="slide-cover mx-2  " >
+            <a [routerLink]="['/tvShows',onAirTV.id]">
+                <img [src]="imgBaseUrl+onAirTV.backdrop_path" class="card-img-top img-fluid">
+                <p>{{ onAirTV.name }}</p>
+            </a>
+        </div>
+    </ngx-slick-carousel>
+</section>
+
+<section class="collection m-auto">
+    <div class="collection-info"><p class="collection-title ">Top 10 </p> </div>
+    <ngx-slick-carousel class="carousel ngx-slick-carousel-category" #slickModal="slick-carousel" [config]="slideConfig" >
+        <div ngxSlickItem *ngFor="let nowPlayingMovie of nowPlayingMovies" class="slide-cover mx-2  " >
+            <a [routerLink]="['/movie',nowPlayingMovie.id]">
+                <img [src]="imgBaseUrl+nowPlayingMovie.backdrop_path" class="card-img-top img-fluid">
+                <p>{{ nowPlayingMovie.original_title }}</p>
+            </a>
+        </div>
+    </ngx-slick-carousel>
+</section>
+
+</div>
+<app-footer></app-footer>

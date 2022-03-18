@@ -1,0 +1,69 @@
+
+<app-carousel></app-carousel>
+
+<!-- popular movies -->
+<div class="collection-info">
+    <p class="collection-title">Popular Movies</p>
+    <a [routerLink]="['/movies']" class="more-link"><span>More</span></a>
+</div>
+<ngx-slick-carousel class="carousel my-1 ngx-slick-carousel-home" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let trendingMovie of trendingMovies" class="slide-inner mx-2  " [ngStyle]="{'background-image':' url(' + imgBaseUrl + trendingMovie.poster_path + ')'}">
+        <a [routerLink]="['/movie',trendingMovie.id]">
+            <div class="details w-100 h-100 ">
+                <fa-icon class="details-icon" [icon]="faPlayCircle"></fa-icon>
+            </div>
+        </a>
+    </div>
+</ngx-slick-carousel>
+
+
+<!-- Upcoming Movies -->
+<div class="collection-info">
+    <p class="collection-title">Upcoming Movies</p>
+    <a  [routerLink]="['/movies']" class="more-link"><span>More</span></a>
+</div>
+<ngx-slick-carousel class="carousel my-1 ngx-slick-carousel-home" #slickModal="slick-carousel" [config]="slideConfig"  >
+    <div ngxSlickItem *ngFor="let upcomingMovie of upcomingMovies" class="slide-inner mx-2  " [ngStyle]="{'background-image':' url(' + imgBaseUrl + upcomingMovie.poster_path + ')'}">
+
+        <a [routerLink]="['/movie',upcomingMovie.id]">
+            <div class="details w-100 h-100">
+                <fa-icon class="details-icon" [icon]="faPlayCircle"></fa-icon>
+            </div>
+        </a>
+    </div>
+</ngx-slick-carousel>
+
+<!-- Top 10-->
+<div class="collection-info">
+    <p class="collection-title">Top 10</p>
+    <a  [routerLink]="['/movies']" class="more-link"><span>More</span></a>
+</div>
+<ngx-slick-carousel class="carousel my-1 ngx-slick-carousel-home" #slickModal="slick-carousel" [config]="slideConfig"  >
+    <div ngxSlickItem *ngFor="let nowPlayingMovie of nowPlayingMovies" class="slide-inner mx-2  " [ngStyle]="{'background-image':' url(' + imgBaseUrl + nowPlayingMovie.poster_path + ')'}">
+
+        <a [routerLink]="['/movie',nowPlayingMovie.id]">
+            <div class="details w-100 h-100">
+                <fa-icon class="details-icon" [icon]="faPlayCircle"></fa-icon>
+            </div>
+        </a>
+    </div>
+</ngx-slick-carousel>
+
+<!-- Popular TV Shows -->
+<div class="collection-info">
+    <p class="collection-title">Popular TV Shows</p>
+    <a  [routerLink]="['/movies']" class="more-link"><span>More</span></a>
+</div>
+<ngx-slick-carousel class="carousel my-1 ngx-slick-carousel-home" #slickModal="slick-carousel" [config]="slideConfig"  >
+    <div ngxSlickItem *ngFor="let series of seriesArr" class="slide-inner mx-2  " [ngStyle]="{'background-image':' url(' + imgBaseUrl + series.poster_path + ')'}">
+
+        <a [routerLink]="['/tvShows',series.id]">
+            <div class="details w-100 h-100">
+                <fa-icon class="details-icon" [icon]="faPlayCircle"></fa-icon>
+            </div>
+        </a>
+    </div>
+</ngx-slick-carousel>
+
+<app-footer></app-footer>
+

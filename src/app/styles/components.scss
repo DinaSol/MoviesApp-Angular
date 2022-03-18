@@ -1,0 +1,154 @@
+// Navbar Component
+.navbar{
+    .navbar-inverse{
+        background-color:$crimson-color !important;
+    }
+    .navbar-brand{
+        margin-left: $margin-8 !important;
+    }
+    .nav-item{
+        width: $width-115;
+        height: $height-50;
+        margin: $margin-8;
+        width: 130px;
+    }
+    .nav-link{
+        font-size:$font-20;
+        text-align: center;
+        font-weight: $font-weight-700;
+    }
+    .activate{
+        background-color: $crimson-color;
+    }
+}
+
+
+
+/////////////////// Carousel Component /////////////////
+.carousel , .carousels-container , .carousel-inner , .carousel-item {
+    height: $height-560 ;
+    width: $percent-100;
+}
+
+.carousel-control-next , .carousel-control-prev{
+    width: 100px !important;
+}
+
+////////////////// Home Component ///////////////////////
+
+.slick-slider { // the container of the slick carousel
+    width: 90%;
+    margin: auto;
+    background-color: transparent;
+}
+    .more-link {
+        font-size: $collection-font-size;
+        line-height: $collection-line-height;
+        font-weight: $font-weight-700;
+        float: right;
+        text-decoration: none;
+        color: $more-link-color;
+    }
+.ngx-slick-carousel-home{
+    height: 400px ;
+}
+body .slick-prev,body .slick-next {
+    height: 45px;
+    width: 40px;
+    background: rgba(212, 212, 212, 0.788) !important;
+    z-index: 100;
+}
+
+.slide-inner { // one Movie in slick home carousel
+    width: $width-280 !important;
+    height: $width-280 +100 !important;
+    border-radius: 13px !important;
+    @extend .cover;
+    transition: all 50ms ease-in-out !important;
+    .details { // the hovered div
+        background-color: rgba(0, 0, 0, 0.294);
+        opacity: 0;
+        @extend .full;
+        @extend .align-justify-center;
+        transition: opacity 0.4s ease-in-out !important;
+        .details-icon { // the icon in the hovered div
+            font-size:$icon-font ;
+            color: $icon-color;
+        }
+    }
+}
+.slide-inner:hover .details {
+    opacity: 1;
+}
+
+//Movies & TV Shows Components
+.ngx-slick-carousel-category{
+    height: 250px !important;
+}
+.category-container{
+    margin-top: 100px;
+}
+.collection{
+    margin-top: 100px !important;
+}
+.slide-cover { // one movie or series in carousel
+    width: 310px !important;
+    border-radius: 10px !important;
+    @extend .cover ;
+    a{
+        @extend .link-none ;
+        p{
+            color:$white;
+            width: $percent-100;
+            margin-top: $margin-8 +2;
+            font-size: $font-18;
+            text-align: $center !important;
+        }
+    }
+   
+}
+
+.slide-cover img {
+    width: $percent-100;
+    height: 180px;
+}
+
+// Movie & TV Show Details Components
+.movie-details , .TVShow-details{
+    @extend .carousel;
+    height:  $height-700 !important;
+}
+
+
+//NotFound Component
+.not-found{
+    background-color:transparent;
+    width: $percent-100;
+    height: 100vh;
+    @extend .align-justify-center;
+
+   .not-found-info {
+    .img{
+            img{
+                width:300px;
+                height: 300px;
+            }
+            } 
+        }
+    .not-found-text{
+        p{
+            font-size: $font-20;
+        }
+    }
+    .btn{
+        background-color: $crimson-color;
+        color: $white;
+        font-size:22px;
+        font-weight: $font-weight-700;
+        padding: 12px 17px;
+        border-radius: 6px;
+    }
+}
+.btn:hover{
+    background-color: $crimson-color-hover !important;
+}

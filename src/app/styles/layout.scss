@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $body-font-family;
+    background-color:  $body-bg;
+    color: $white;
+    overflow-x: hidden;
+}
+
+.full{
+    height: 100%;
+    width: 100%;
+}
+.link-none{
+    text-decoration: none;
+    color: $white;
+    :hover{
+        color: $semi-white;
+    }
+}
+.align-justify-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//shared between carousel , movie details , series details
+.text-starter{
+    background-color: $body-bg;
+}
+.cover{
+    background-position: $center $center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: $percent-100 $percent-100;  
+}
+
+.row{
+    position: relative;
+}
+.overlay-details{
+    background-image: $overlay-bg !important;
+    @extend .full;
+    padding: 0 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .overlay-details-inner{
+        background-image:$overlay-bg-inner !important;
+        width: 45%;
+        height: 100%;
+        .title{
+            color: $crimson-color;
+            font-weight: $font-weight-900;
+            margin-bottom: $margin-20;
+            line-height: 1.3;
+            font-size: 3.2rem;
+            font-family: $body-font-family;
+        }
+        .overview{
+                font-size: 1.3rem;
+        }
+    }
+
+}
+
+.category{ // the category title (Movies , TV Shows)
+    font-size: 3.25rem;
+    margin:0 0px 90px 95px;
+    font-weight: $font-weight-900;
+}
+.collection-info { // the div of the information of collections (Trending Movies, Top 10 , ..etc)
+    width: $percent-100;
+    padding: 0 $padding-100;
+    margin-top: $margin-40+10  !important;
+    .collection-title{ 
+        font-size: $collection-font-size;
+        font-weight: $font-weight-700;
+        color: $white;
+        display: inline-block;
+    }}
+
+
+    //Footer Component
+    
+.footer{
+    background-color: #020b14;
+    width: $percent-100;
+    height: 350px;
+    @extend .align-justify-center;
+    margin-top: $margin-40;
+    .row{
+        width: 60%;
+        height: 100%;
+        @extend .align-justify-center;
+    }
+}
+.web-info{
+    ul{
+        margin-top: 50px;
+        li{
+            list-style: none;
+            margin-top: 10px;
+        }
+    }
+}

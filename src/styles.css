@@ -1,0 +1,266 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #010f1b;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.full, .overlay-details, .slide-inner .details {
+  height: 100%;
+  width: 100%;
+}
+
+.link-none, .slide-cover a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link-none :hover, .slide-cover a :hover {
+  color: #c8c8c8;
+}
+
+.align-justify-center, .footer, .footer .row, .slide-inner .details, .not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-starter {
+  background-color: #010f1b;
+}
+
+.cover, .slide-inner, .slide-cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.row {
+  position: relative;
+}
+
+.overlay-details {
+  background-image: -webkit-gradient(linear, left top, right top, from(#010f1b), color-stop(#010f1bc7), to(#010f1b00)) !important;
+  background-image: linear-gradient(to right, #010f1b, #010f1bc7, #010f1b00) !important;
+  padding: 0 140px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay-details .overlay-details-inner {
+  background-image: -webkit-gradient(linear, left top, right top, from(#010f1b), color-stop(#010f1bf5), to(#010f1b00)) !important;
+  background-image: linear-gradient(to right, #010f1b, #010f1bf5, #010f1b00) !important;
+  width: 45%;
+  height: 100%;
+}
+
+.overlay-details .overlay-details-inner .title {
+  color: #0097fbd3;
+  font-weight: 900;
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow ", sans-serif;
+  margin-bottom: 20px;
+}
+
+.overlay-details .overlay-details-inner .overview {
+  font-size: 1.4rem;
+}
+
+.category {
+  font-size: 3.25rem;
+  margin: 0 0px 90px 95px;
+  font-weight: 900;
+}
+
+.collection-info {
+  width: 100%;
+  padding: 0 100px;
+  margin-top: 50px !important;
+}
+
+.collection-info .collection-title {
+  font-size: 27px;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+}
+
+.footer {
+  background-color: #020b14;
+  width: 100%;
+  height: 350px;
+  margin-top: 40px;
+}
+
+.footer .row {
+  width: 60%;
+  height: 100%;
+}
+
+.web-info ul {
+  margin-top: 50px;
+}
+
+.web-info ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.navbar .navbar-inverse {
+  background-color: #0097fbd3 !important;
+}
+
+.navbar .navbar-brand {
+  margin-left: 8px !important;
+}
+
+.navbar .nav-item {
+  width: 115px;
+  height: 50px;
+  margin: 8px;
+  width: 130px;
+}
+
+.navbar .nav-link {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.navbar .activate {
+  background-color: #0097fbd3;
+}
+
+.carousel, .movie-details, .TVShow-details, .carousels-container, .carousel-inner, .carousel-item {
+  height: 560px;
+  width: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 100px !important;
+}
+
+.slick-slider {
+  width: 90%;
+  margin: auto;
+  background-color: transparent;
+}
+
+.more-link {
+  font-size: 27px;
+  line-height: 27px;
+  font-weight: 700;
+  float: right;
+  text-decoration: none;
+  color: rgba(136, 136, 136, 0.788);
+}
+
+.ngx-slick-carousel-home {
+  height: 400px;
+}
+
+body .slick-prev, body .slick-next {
+  height: 45px;
+  width: 40px;
+  background: rgba(212, 212, 212, 0.788) !important;
+  z-index: 100;
+}
+
+.slide-inner {
+  width: 280px !important;
+  height: 380px !important;
+  border-radius: 13px !important;
+  -webkit-transition: all 50ms ease-in-out !important;
+  transition: all 50ms ease-in-out !important;
+}
+
+.slide-inner .details {
+  background-color: rgba(0, 0, 0, 0.294);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out !important;
+  transition: opacity 0.4s ease-in-out !important;
+}
+
+.slide-inner .details .details-icon {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.897);
+}
+
+.slide-inner:hover .details {
+  opacity: 1;
+}
+
+.ngx-slick-carousel-category {
+  height: 250px !important;
+}
+
+.category-container {
+  margin-top: 100px;
+}
+
+.collection {
+  margin-top: 100px !important;
+}
+
+.slide-cover {
+  width: 310px !important;
+  border-radius: 10px !important;
+}
+
+.slide-cover a p {
+  color: #fff;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center !important;
+}
+
+.slide-cover img {
+  width: 100%;
+  height: 180px;
+}
+
+.movie-details, .TVShow-details {
+  height: 700px !important;
+}
+
+.not-found {
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+}
+
+.not-found .not-found-info .img img {
+  width: 300px;
+  height: 300px;
+}
+
+.not-found .not-found-text p {
+  font-size: 20px;
+}
+
+.not-found .btn {
+  background-color: #0097fbd3;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 12px 17px;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: #0097fbd3 !important;
+}
+/*# sourceMappingURL=styles.css.map */

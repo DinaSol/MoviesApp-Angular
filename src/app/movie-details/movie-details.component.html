@@ -1,0 +1,29 @@
+<div class="m-auto w-100 movie-details movie-details-height">
+    <div class=" row h-100 w-100">
+        <div class="text-starter h-100 col-md-3"></div>
+        <div class="cover h-100 col-md-9" [ngStyle]="{'background-image':' url(' + imgBaseUrl + movieDetails.backdrop_path + ')'}"></div>
+        <div class="overlay-details d-flex justify-content-between align-items-center ">
+            <div class="overlay-details-inner d-flex align-items-center ">
+                <div >
+                    <h2 class="title">{{ movieDetails.original_title }}</h2>
+                    <p class="overview">{{ overview }}</p>
+                    <span>{{ movieDate[0] }} | {{ movieDetails.vote_average }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="collection-info  m-auto mt-5 w-90">
+    <h2 class="mb-2">More Like This</h2>
+    <div class="row ">
+        <div class="col-md-2 my-3 card bg-transparent" *ngFor="let similarMovie of similarMovies">
+                <a class="link-none" [routerLink]="['/movie', similarMovie.id]" >
+                    <img [src]="imgBaseUrl+similarMovie.backdrop_path" class="card-img-top img-fluid">
+                        <p class="text-center mt-1 link-none">{{ similarMovie.original_title}}</p>
+                </a>
+        </div>
+    </div>
+</section>
+
+    
+<app-footer></app-footer>

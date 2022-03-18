@@ -1,0 +1,39 @@
+<div class="category-container">
+    <h1 class="category">Movies</h1>
+    <section class="collection m-auto">
+        <div class="collection-info"><p class="collection-title ">Popular Movies </p></div>
+        <ngx-slick-carousel class="carousel ngx-slick-carousel-category" #slickModal="slick-carousel" [config]="slideConfig" >
+            <div ngxSlickItem *ngFor="let trendingMovie of trendingMovies" class="slide-cover mx-2  " >
+                <a [routerLink]="['/movie',trendingMovie.id]">
+                    <img [src]="imgBaseUrl+trendingMovie.backdrop_path" class="card-img-top img-fluid">
+                    <p>{{ trendingMovie.original_title }}</p>
+                </a>
+            </div>
+        </ngx-slick-carousel>
+    </section>
+    
+    <section class="collection m-auto">
+        <div class="collection-info"><p class="collection-title ">Upcoming Movies </p></div>
+        <ngx-slick-carousel class="carousel ngx-slick-carousel-category" #slickModal="slick-carousel" [config]="slideConfig" >
+            <div ngxSlickItem *ngFor="let upcomingMovie of upcomingMovies" class="slide-cover mx-2  " >
+                <a [routerLink]="['/movie',upcomingMovie.id]">
+                    <img [src]="imgBaseUrl+upcomingMovie.backdrop_path" class="card-img-top img-fluid">
+                    <p>{{ upcomingMovie.original_title }}</p>
+                </a>
+            </div>
+        </ngx-slick-carousel>
+    </section>
+    <section class="collection m-auto">
+        <div class="collection-info"><p class="collection-title ">Top 10 </p></div>
+        <ngx-slick-carousel class="carousel ngx-slick-carousel-category" #slickModal="slick-carousel" [config]="slideConfig" >
+            <div ngxSlickItem *ngFor="let nowPlayingMovie of nowPlayingMovies" class="slide-cover mx-2  " >
+                <a class="link-none" [routerLink]="['/movie',nowPlayingMovie.id]">
+                    <img [src]="imgBaseUrl+nowPlayingMovie.backdrop_path" class="card-img-top img-fluid">
+                    <p>{{ nowPlayingMovie.original_title }}</p>
+                </a>
+            </div>
+        </ngx-slick-carousel>
+    </section>
+</div>
+
+<app-footer></app-footer>
